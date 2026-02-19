@@ -8,7 +8,8 @@ urlpatterns = [
     path('logout/', views.cerrar_sesion, name='logout'),
 
     path('dashboard/', views.dashboard, name='dashboard'),
-    # path('libros/', views.listar_libros, name='listar_libros'),
+   
+   
 
 
     path('libro/añadir/', views.añadir_libro, name='añadir_libro'),
