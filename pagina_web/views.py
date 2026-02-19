@@ -11,7 +11,7 @@ import os
 
 db = initialize_firebase()
 
-#  registro de usuario
+#  registro para que los usuarios puedan loggearse
 def registro_usuario(request):
     mensaje = None
     if request.method == 'POST':
