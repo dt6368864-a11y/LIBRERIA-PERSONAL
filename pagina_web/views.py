@@ -8,9 +8,10 @@ from functools import wraps
 import requests
 import os
 
+
 db = initialize_firebase()
 
-#  registro de usuario
+#  registro para que los usuarios puedan loggearse
 def registro_usuario(request):
     mensaje = None
     if request.method == 'POST':
@@ -29,11 +30,11 @@ def registro_usuario(request):
                 'fecha_registro': firestore.SERVER_TIMESTAMP
             })
 
-            mensaje = f"✅ Usuario registrado con éxito con  uid: {user.uid}"
+            mensaje = f"✅ Usuario registrado éxitosamente {user.uid}"
 
         except Exception as e:
             # messages.error(os.error)
-            mensaje = f"❌ Error al registrar usuario: {str(e)}"
+            mensaje = f"❌ Error!! No se pudo registrar el usuario: {str(e)}"
 
     return render(request, 'registro.html', {'mensaje': mensaje})
 
@@ -75,7 +76,7 @@ def iniciar_sesion(request):
                 request.session['uid']= data['localId']
                 request.session['email'] = data['email']
                 request.session['idToken'] = data['idToken']
-                messages.success(request, f"✅ sesión iniciada.")
+                messages.success(request, f"✅ sesión iniciada correctamente.")
                 return redirect('dashboard')
             else:
                 error_message = data.get('error', {}).get('message', 'Error desconocido')

@@ -3,7 +3,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Editar Libro</title>
+    <title>pagian de edicion del libro</title>
     <link rel="stylesheet" href="{% static 'pagina_web/editar.css' %}">
 </head>
 <body>
@@ -33,7 +33,7 @@
             <option value="No Recomendable" {% if libro.recomendacion == "No Recomendable" %}selected{% endif %}>No Recomendable</option>
         </select>
 
-        <button type="submit" class="btn editar">Actualizar Libro</button>
+        <button type="submit" class="btn editar">Actualizar este Libro</button>
     </form>
 
     <a href="{% url 'dashboard' %}" class="btn volver">Volver</a>
