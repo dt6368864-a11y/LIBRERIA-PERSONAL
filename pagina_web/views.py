@@ -34,7 +34,7 @@ def registro_usuario(request):
 
         except Exception as e:
             # messages.error(os.error)
-            mensaje = f"❌ Error al registrar usuario: {str(e)}"
+            mensaje = f"❌ Error!! No se pudo registrar el usuario: {str(e)}"
 
     return render(request, 'registro.html', {'mensaje': mensaje})
 
