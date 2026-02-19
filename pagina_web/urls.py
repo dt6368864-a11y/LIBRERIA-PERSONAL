@@ -8,7 +8,7 @@ urlpatterns = [
     path('logout/', views.cerrar_sesion, name='logout'),
 
     path('dashboard/', views.dashboard, name='dashboard'),
-   
+   #este es el urle que usamos para ir al dashbard donde esta a lisa de libros
    
 
 
