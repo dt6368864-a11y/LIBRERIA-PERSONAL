@@ -8,6 +8,7 @@ from functools import wraps
 import requests
 import os
 
+
 db = initialize_firebase()
 
 #  registro de usuario
@@ -29,7 +30,7 @@ def registro_usuario(request):
                 'fecha_registro': firestore.SERVER_TIMESTAMP
             })
 
-            mensaje = f"✅ Usuario registrado con éxito con  uid: {user.uid}"
+            mensaje = f"✅ Usuario registrado éxitosamente {user.uid}"
 
         except Exception as e:
             # messages.error(os.error)
