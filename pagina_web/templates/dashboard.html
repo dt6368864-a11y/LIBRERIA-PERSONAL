@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Librería</title>
+    <link rel="stylesheet" href="{% static 'pagina_web/dash.css' %}">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Mi Librería Personal</h1>
+        <a href="{% url 'logout' %}" class="link">Cerrar sesión</a>
+    </header>
+
+    <h2>Libros que he leído</h2>
+
+    <div class="crear">
+        <a href="{% url 'añadir_libro' %}" class="boton">Añadir libro</a>
+    </div>
+
+    <div class="contenedor">
+
+        {% for libro in libros %}
+
+        <div class="tarjeta">
+            
+
+            <h3>{{ libro.titulo }}</h3>
+
+            <p>Autor: {{ libro.autor }}</p>
+            <p>Año: {{ libro.fecha }}</p>
+
+            <p>{{ libro.descripcion }}</p>
+
+            <p>Opinión: {{ libro.opinion }}</p>
+            <p>Recomendación: {{ libro.recomendacion }}</p>
+
+            <div class="acciones">
+                <a href="{% url 'editar_libro' libro.id %}">Editar</a>
+                <a href="{% url 'eliminar_libro' libro.id %}">Eliminar</a>
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+
+        {% if libros %}
+        <p>SI HAY LIBROS</p>
+        {% else %}
+        <p>NO HAY LIBROS</p>
+        {% endif %}
+
+    </div>
+
+</body>
+
+</html>

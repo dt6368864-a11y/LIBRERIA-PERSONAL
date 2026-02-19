@@ -1,0 +1,147 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* FONDO GENERAL */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f1ee;
+    color: #333;
+}
+
+
+/* HEADER */
+.header {
+    background: #5e6d67;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    font-size: 22px;
+    font-weight: normal;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 8px 15px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.link:hover {
+    background: white;
+    color: #5e6d67;
+}
+
+/* TÍTULO */
+h2 {
+    text-align: center;
+    margin: 30px 0 20px 0;
+    font-weight: normal;
+}
+
+/* BOTÓN AÑADIR */
+.crear {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.boton {
+    background: #6c7f79;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background: #5a6a64;
+}
+
+/* CONTENEDOR TARJETAS */
+.contenedor {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+/* TARJETAS */
+.tarjeta {
+    background: white;
+    width: 300px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+}
+
+/* IMAGEN LIBRO */
+.tarjeta img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* TEXTO */
+.tarjeta h3 {
+    margin-bottom: 10px;
+}
+
+.tarjeta p {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+/* ACCIONES */
+.acciones {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.acciones a {
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+/* BOTÓN EDITAR */
+.acciones a:first-child {
+    background: #d2b48c;
+    color: white;
+}
+
+.acciones a:first-child:hover {
+    background: #c19a6b;
+}
+
+/* BOTÓN ELIMINAR */
+.acciones a:last-child {
+    background: #8b6f61;
+    color: white;
+}
+
+.acciones a:last-child:hover {
+    background: #6f574c;
+}

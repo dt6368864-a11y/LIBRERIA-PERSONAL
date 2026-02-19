@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Añadir Libro</title>
+    <link rel="stylesheet" href="{% static 'pagina_web/añadir.css' %}">
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <h1>Añadir Libro</h1>
+
+        <!-- MENSAJES -->
+        {% if messages %}
+        {% for message in messages %}
+        <div class="mensaje {{ message.tags }}">
+            {{ message }}
+        </div>
+        {% endfor %}
+        {% endif %}
+
+        <!-- FORMULARIO -->
+        <form method="POST">
+            {% csrf_token %}
+
+            <div class="grupo">
+                <label>autor</label>
+                <input type="text" name="autor" required>
+            </div>
+            <div class="grupo">
+                <label>Título</label>
+                <input type="text" name="titulo" required>
+            </div>
+
+            <div class="grupo">
+                <label>Descripción</label>
+                <textarea name="descripcion" rows="4" required></textarea>
+            </div>
+
+            <div class="grupo">
+                <label>Fecha de publicación</label>
+                <input type="date" name="fecha" required>
+            </div>
+
+            <div class="grupo">
+                <label>Opinión</label>
+                <textarea name="opinion" rows="3"></textarea>
+            </div>
+
+            <div class="grupo">
+                <label>Recomendación</label>
+                <select name="recomendacion" required>
+                    <option value="">Selecciona</option>
+                    <option value="Muy recomendable">Muy recomendable</option>
+                    <option value="Recomendable">Recomendable</option>
+                    <option value="No recomendable">No recomendable</option>
+                </select>
+            </div>
+
+            <button type="submit" class="boton">Guardar libro</button>
+
+        </form>
+
+        <a href="{% url 'dashboard' %}" class="volver">← Volver</a>
+
+    </div>
+
+</body>
+
+</html>

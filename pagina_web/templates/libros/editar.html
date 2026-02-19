@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Libro</title>
+    <link rel="stylesheet" href="{% static 'pagina_web/editar.css' %}">
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Editar Libro</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <label>Título</label>
+        <input type="text" name="titulo" value="{{ libro.titulo }}" required>
+
+        <label>Descripción</label>
+        <textarea name="descripcion" required>{{ libro.descripcion }}</textarea>
+
+        <label>Fecha</label>
+        <input type="text" name="fecha" value="{{ libro.fecha }}" required>
+
+        <label>Opinión</label>
+        <textarea name="opinion" required>{{ libro.opinion }}</textarea>
+
+        <label>Recomendación</label>
+        <select name="recomendacion">
+            <option value="Muy Recomendable" {% if libro.recomendacion == "Muy Recomendable" %}selected{% endif %}>Muy Recomendable</option>
+            <option value="Recomendable" {% if libro.recomendacion == "Recomendable" %}selected{% endif %}>Recomendable</option>
+            <option value="No Recomendable" {% if libro.recomendacion == "No Recomendable" %}selected{% endif %}>No Recomendable</option>
+        </select>
+
+        <button type="submit" class="btn editar">Actualizar Libro</button>
+    </form>
+
+    <a href="{% url 'dashboard' %}" class="btn volver">Volver</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Georgia', serif;
+}
+
+/* Fondo elegante */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        rgba(255,255,255,0.85),
+        rgba(255,255,255,0.85)
+    ),
+    #d9d9d9;
+}
+
+/* Contenedor tipo tarjeta */
+.container {
+    background: #f5f5f5;
+    padding: 40px 35px;
+    width: 380px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+/* Título */
+h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Subtexto */
+.container p {
+    font-size: 15px;
+    color: #666;
+}
+
+/* Labels */
+label {
+    display: block;
+    text-align: left;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background-color: #eeeeee;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #6c7f79;
+    box-shadow: 0 0 6px rgba(108, 127, 121, 0.4);
+}
+
+/* Botón principal */
+button {
+    margin-top: 25px;
+    padding: 12px;
+    width: 100%;
+    border-radius: 6px;
+    border: none;
+    background-color: #6c7f79;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #5a6b65;
+}
+
+/* Texto inferior */
+form:last-of-type p {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+/* Enlaces */
+a {
+    color: #6c7f79;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Mensaje error */
+.error {
+    color: #c0392b;
+    margin-bottom: 15px;
+}

@@ -1,0 +1,114 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Georgia', serif;
+}
+
+/* Fondo elegante claro */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        rgba(255,255,255,0.9),
+        rgba(255,255,255,0.9)
+    ),
+    #e6e6e6;
+}
+
+/* Tarjeta principal */
+.container {
+    background: #f5f5f5;
+    padding: 45px 40px;
+    width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+/* Título */
+h2 {
+    font-size: 26px;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* Labels */
+label {
+    display: block;
+    text-align: left;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background-color: #eeeeee;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #6c7f79;
+    box-shadow: 0 0 8px rgba(108, 127, 121, 0.4);
+}
+
+/* Botón principal */
+form:first-of-type button {
+    margin-top: 25px;
+    padding: 12px;
+    width: 100%;
+    border-radius: 6px;
+    border: none;
+    background-color: #6c7f79;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form:first-of-type button:hover {
+    background-color: #5a6b65;
+}
+
+/* Botón secundario */
+form:last-of-type button {
+    margin-top: 15px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 6px;
+    border: none;
+    background-color: transparent;
+    color: #6c7f79;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form:last-of-type button:hover {
+    background-color: rgba(108, 127, 121, 0.1);
+}
+
+/* Texto inferior */
+form:last-of-type p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Mensaje error */
+.error {
+    color: #c0392b;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
