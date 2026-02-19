@@ -76,7 +76,7 @@ def iniciar_sesion(request):
                 request.session['uid']= data['localId']
                 request.session['email'] = data['email']
                 request.session['idToken'] = data['idToken']
-                messages.success(request, f"✅ sesión iniciada.")
+                messages.success(request, f"✅ sesión iniciada correctamente.")
                 return redirect('dashboard')
             else:
                 error_message = data.get('error', {}).get('message', 'Error desconocido')
